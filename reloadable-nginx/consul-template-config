@@ -1,0 +1,6 @@
+consul = "192.168.99.100:8500"
+template {
+  source = "/default.conf.tmpl"
+  destination = "/etc/nginx/conf.d/default.conf"
+  command = "service nginx restart"
+}  
