@@ -5,5 +5,5 @@ Assuming every composition is assigned a unique project ID, and assuming every s
 `http://host/$PROJECT_ID/$CONTAINER_NAME`
 
 # Usage
-
+Replace all instances of `$HOST_IP` with the actual host IP in `docker-compose.yml` and in `reloadable-nginx/default.conf.tmpl`, then run:
 `docker-compose up`
