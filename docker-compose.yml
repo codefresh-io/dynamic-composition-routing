@@ -3,14 +3,14 @@ services:
         consul:
                 image: "gliderlabs/consul-server"
                 container_name: "consul"
-                command: ['-bootstrap', '-advertise=$HOST_IP']
+                command: ['-bootstrap', '-advertise=127.0.0.1']
                 network_mode: "host"
 
         registrator:
                 image: "gliderlabs/registrator"
                 container_name: "registrator"
                 network_mode: "host"
-                command: ['consul://$HOST_IP:8500']
+                command: ['consul://$HOST_IP:127.0.0.1']
                 depends_on:
                         - consul
                 volumes:
