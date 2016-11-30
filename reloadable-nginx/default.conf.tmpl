@@ -18,7 +18,7 @@
       {{range service $serviceName}}
 
         # Add an upstream def so that we can forward request to
-        upstream {{$serviceName}} {
+        upstream {{$projectName}}-{{$serviceName}} {
           server $HOST_IP:{{.Port}};
         }
       {{end}}
@@ -55,7 +55,7 @@ server {
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header X-Forwarded-Proto $scheme;
           proxy_cache_bypass $http_upgrade;
-          proxy_pass http://{{$serviceName}}/;
+          proxy_pass http://{{$serviceProject}}-{{$serviceName}}/;
       }
     {{end}}
   {{end}}
