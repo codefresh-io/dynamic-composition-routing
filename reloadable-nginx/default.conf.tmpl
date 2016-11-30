@@ -19,7 +19,7 @@
 
         # Add an upstream def so that we can forward request to
         upstream {{$projectName}}-{{$serviceName}} {
-          server $HOST_IP:{{.Port}};
+          server 127.0.0.1:{{.Port}};
         }
       {{end}}
     {{end}}
@@ -28,7 +28,7 @@
 
 server {
     listen       80;
-    server_name  $HOST_IP;
+    server_name  $SERVER_NAME;
 
     location / {
         root   /usr/share/nginx/html;
