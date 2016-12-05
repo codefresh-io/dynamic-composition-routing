@@ -3,7 +3,7 @@ services:
         consul:
                 image: "consul"
                 container_name: "consul"
-                command: ['-bootstrap', '-advertise=127.0.0.1']
+                command: ['agent', '-server', '-bootstrap', '-bind=127.0.0.1']
                 network_mode: "host"
 
         registrator:
