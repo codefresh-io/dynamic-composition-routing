@@ -1,7 +1,7 @@
 version: '2'
 services:
         consul:
-                image: "gliderlabs/consul-server"
+                image: "consul"
                 container_name: "consul"
                 command: ['-bootstrap', '-advertise=127.0.0.1']
                 network_mode: "host"
