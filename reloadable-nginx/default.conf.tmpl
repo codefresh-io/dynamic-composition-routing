@@ -41,7 +41,7 @@ server {
     {{range service $serviceName}}
 
       # Map the service as /serviceName -> service upstream
-      location  /{{.Name}}/ {
+      location  ^~ /{{.Name}} {
           proxy_http_version 1.1;
           proxy_set_header Upgrade $http_upgrade;
           proxy_set_header Connection 'upgrade';
