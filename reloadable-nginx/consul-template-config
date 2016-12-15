@@ -2,5 +2,5 @@ consul = "127.0.0.1:8500"
 template {
   source = "/default.conf.tmpl"
   destination = "/etc/nginx/conf.d/default.conf"
-  command = "service nginx restart"
+  command = "service nginx reload"
 }  
