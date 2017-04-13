@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get autoremove -y && \
     rm -rf /var/lib/{apt,dpkg,cache,log}
 
-RUN wget https://releases.hashicorp.com/consul-template/0.18.0-rc1/consul-template_0.18.0-rc1_linux_amd64.tgz
-RUN tar -xvf consul-template_0.18.0-rc1_linux_amd64.tgz
+RUN wget https://releases.hashicorp.com/consul-template/0.18.2/consul-template_0.18.2_linux_amd64.tgz
+RUN tar -xvf consul-template_0.18.2_linux_amd64.tgz
 
 CMD ["sh", "/start_services.sh"]
