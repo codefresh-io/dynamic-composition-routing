@@ -5,4 +5,4 @@ Assuming every composition is assigned a unique project ID, and assuming every s
 `http://host/$PROJECT_ID/$SERVICE_NAME`
 
 # Usage
-Simply run `docker-compose up`
+Simply run `docker-compose up -d`
